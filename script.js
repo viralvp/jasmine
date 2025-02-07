@@ -3,6 +3,7 @@ const no = document.querySelector("#noBtn");
 let yesButtonSize = 16;
 let yesbtn = 1;
 let noBtn = 1;
+let i = 1;
 function getRandomPosition() {
   const buttonWidth = no.offsetWidth;
   const buttonHeight = no.offsetHeight;
@@ -30,13 +31,13 @@ function adjustButtons() {
     no.style.left = `${x}px`;
     no.style.top = `${y}px`;
   }
-  document.getElementById("apologyImg").src =
-    "./images/bubu-dudu-sseeyall (1).gif"; // Sad Bubu Dudu GIF
+
+  document.getElementById("apologyImg").src = `./images/${i}.gif`; // Sad Bubu Dudu GIF
+  i++;
 }
 
 function forgive() {
-  document.getElementById("apologyImg").src =
-    "./images/bubu-dudu-sseeyall (1).gif"; // Happy Bubu Dudu GIF
+  document.getElementById("apologyImg").src = "./images/.gif"; // Happy Bubu Dudu GIF
 
   document.getElementById("buttonContainer").remove();
 }
