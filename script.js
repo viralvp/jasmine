@@ -1,5 +1,6 @@
 const yes = document.querySelector("#yesBtn");
 const no = document.querySelector("#noBtn");
+const body = document.querySelector("body");
 let yesButtonSize = 16;
 let yesbtn = 1;
 let noBtn = 1;
@@ -40,10 +41,28 @@ function adjustButtons() {
   }
 }
 
+function horray() {
+  const { x, y } = getRandomPosition();
+  const gif = document.createElement("img");
+  gif.src = `./images/happy/${i}.gif`;
+  gif.classList.add("yes");
+
+  // Set random position
+  gif.style.position = "absolute"; // Ensure positioning works
+  gif.style.left = `${x}px`;
+  gif.style.top = `${y}px`;
+
+  // Append the GIF to the body
+  document.body.insertAdjacentElement("beforeend", gif);
+
+  // Update i value (cycle between 1 and 21)
+  i = i < 21 ? i + 1 : 1;
+}
 function forgive() {
-  document.getElementById("apologyImg").src = "./images/${}.gif"; // Happy Bubu Dudu GIF
+  document.getElementById("apologyImg").src = `./images/happy/${1}.gif`; // Happy Bubu Dudu GIF
 
   document.getElementById("buttonContainer").remove();
+  setInterval(horray, 1000);
 }
 console.log(yes);
 yes.addEventListener("click", forgive);

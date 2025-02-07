@@ -15,7 +15,7 @@ body {
 img {
   width: 80%;
   max-width: 300px;
-  border-radius: 10px;
+
   margin-bottom: 20px;
 }
 
@@ -41,4 +41,12 @@ button {
 #noBtn {
   background-color: red;
   color: white;
+}
+.yes {
+  position: absolute;
+  display: block;
+  width: 15vw; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100px; /* Prevent being too big on large screens */
+  max-height: 100px;
 }
