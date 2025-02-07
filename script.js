@@ -1,6 +1,7 @@
 const yes = document.querySelector("#yesBtn");
 const no = document.querySelector("#noBtn");
 const body = document.querySelector("body");
+const h2 = document.querySelector("h2");
 let yesButtonSize = 16;
 let yesbtn = 1;
 let noBtn = 1;
@@ -59,8 +60,8 @@ function horray() {
   i = i < 21 ? i + 1 : 1;
 }
 function forgive() {
-  document.getElementById("apologyImg").src = `./images/happy/${1}.gif`; // Happy Bubu Dudu GIF
-
+  document.getElementById("apologyImg").src = `./images/happy/${1}.gif`;
+  h2.textContent = "thank you for forgiving me❤️🥰 " + "love you❤️";
   document.getElementById("buttonContainer").remove();
   setInterval(horray, 1000);
 }
