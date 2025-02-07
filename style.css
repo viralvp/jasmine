@@ -15,7 +15,6 @@ body {
 img {
   width: 80%;
   max-width: 300px;
-
   margin-bottom: 20px;
 }
 
@@ -30,7 +29,6 @@ button {
   cursor: pointer;
   border-radius: 5px;
   transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease;
-  position: absolute;
 }
 
 #yesBtn {
@@ -39,6 +37,7 @@ button {
 }
 
 #noBtn {
+  position: absolute;
   background-color: red;
   color: white;
 }
