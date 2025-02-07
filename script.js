@@ -32,12 +32,16 @@ function adjustButtons() {
     no.style.top = `${y}px`;
   }
 
-  document.getElementById("apologyImg").src = `./images/${i}.gif`; // Sad Bubu Dudu GIF
-  i++;
+  document.getElementById("apologyImg").src = `./images/sad/${i}.gif`; // Sad Bubu Dudu GIF
+  if (i < 13) {
+    i++;
+  } else {
+    i = 1;
+  }
 }
 
 function forgive() {
-  document.getElementById("apologyImg").src = "./images/.gif"; // Happy Bubu Dudu GIF
+  document.getElementById("apologyImg").src = "./images/${}.gif"; // Happy Bubu Dudu GIF
 
   document.getElementById("buttonContainer").remove();
 }
